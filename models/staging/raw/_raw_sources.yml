@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+
+  - name: raw # name of the source (this can be named whatever you want, but should be descriptive)
+    schema: raw # this is the schema our raw data lives in
+    database: raw_anduril # this is the name of the database that our source data lives in
+
+    quoting:
+      database: false
+      schema: false
+      identifier: false      
+
+    tables: # this is where we define table metadata (name, description, load timestamps)
+      - name: transaction_line 
+      - name: item
+      - name: location   
+      - name: costs
+      - name: bin
+      - name: inventory_status
